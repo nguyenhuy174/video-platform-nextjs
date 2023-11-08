@@ -3,11 +3,7 @@ import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 
 import Navbar from "@/components/Navbar";
-import Billboard from "@/components/Billboard";
-import MovieList from "@/components/MovieList";
 import InfoModal from "@/components/InfoModal";
-import useMovieList from "@/hooks/useMovieList";
-import useFavorites from "@/hooks/useFavorites";
 import useInfoModal from "@/hooks/useInfoModal";
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -28,18 +24,17 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 const Home = () => {
-  const { data: movies = [] } = useMovieList();
-  const { data: favorites = [] } = useFavorites();
   const { isOpen, closeModal } = useInfoModal();
 
   return (
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <Billboard />
-      <div className="pb-40">
-        <MovieList title="Phim mới cập nhật" data={movies} />
-        <MovieList title="Danh sách yêu thích" data={favorites} />
+      <div className="flex flex-col items-center justify-center h-screen">
+        <p className="text-yellow-500 text-2xl mb-4">
+          Oops! Chức năng này vẫn đang phát triển
+        </p>
+        <p className="text-yellow-500 text-3xl font-bold">:&#60;</p>
       </div>
     </>
   );
