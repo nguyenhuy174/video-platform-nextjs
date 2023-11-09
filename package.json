@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -15,6 +16,7 @@
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "lodash": "^4.17.21",
+    "mongodb": "^6.2.0",
     "next": "14.0.1",
     "next-auth": "^4.24.4",
     "react": "^18",
