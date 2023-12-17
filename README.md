@@ -6,9 +6,9 @@ Tìm hiểu về NextJS và ứng dụng xây dựng nền tảng xem video.
 <details>
   <summary>Thông tin chi tiết</summary>
 
-| STT | MSSV       | Họ và tên                                                  | Lớp     |
-| --- | ---------- | ---------------------------------------------------------- | ------  |
-| 1   | 2051120125 | [Nguyễn Ngọc Huy]                                          | CN20A   |
+| STT | MSSV       | Họ và tên                     | Lớp    |
+| --- | ---------- | ------------------------------| ------ |
+| 1   | 2051120125 | Nguyễn Ngọc Huy               | CN20A  |
 
 </details>
 
