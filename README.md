@@ -14,6 +14,4 @@ Tìm hiểu về NextJS và ứng dụng xây dựng nền tảng xem video.
 
 ## 2. Công nghệ sử dụng
 
-<details>
 - React, Tailwind CSS, Next.JS, Prisma, MongoDB.
-</details>
