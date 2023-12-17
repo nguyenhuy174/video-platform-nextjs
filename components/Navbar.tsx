@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import {
   BellIcon,
   ChevronDownIcon,
@@ -18,6 +19,7 @@ const Navbar = () => {
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +46,10 @@ const Navbar = () => {
     setShowMobileMenu((current) => !current);
   }, []);
 
+  const goToHomePage = useCallback(() => {
+    router.push("/");
+  }, [router]);
+
   return (
     <nav className="w-full fixed z-40">
       <div
@@ -51,7 +57,12 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img src="/images/logo2.png" className="h-4 lg:h-7" alt="Logo" />
+        <img
+          src="/images/logo2.png"
+          className="h-4 lg:h-7 cursor-pointer transition"
+          alt="Logo"
+          onClick={goToHomePage}
+        />
         <div className="text-xl flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItemHome label="Trang chủ" />
           <NavbarItem label="Phim bộ" />
@@ -71,13 +82,6 @@ const Navbar = () => {
           <MobileMenu visible={showMobileMenu} />
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
-          <div>
-            <input
-              className="w-150 h-10 rounded-full p-3 border border-gray-300 focus:outline-none focus:border-blue-400"
-              type="text"
-              placeholder="Tìm kiếm phim..."
-            />
-          </div>
           <IconSearch />
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <BellIcon className="w-6" />
