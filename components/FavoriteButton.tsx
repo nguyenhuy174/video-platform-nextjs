@@ -3,15 +3,12 @@ import React, { useCallback, useMemo } from 'react';
 import { PlusIcon, CheckIcon } from '@heroicons/react/24/outline';
 
 import useCurrentUser from '@/hooks/useCurrentUser';
-import useFavorites from '@/hooks/useFavorites';
 
 interface FavoriteButtonProps {
   movieId: string
 }
 
 const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
-  const { mutate: mutateFavorites } = useFavorites();
-
   const { data: currentUser, mutate } = useCurrentUser();
 
   const isFavorite = useMemo(() => {
@@ -35,8 +32,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
       ...currentUser, 
       favoriteIds: updatedFavoriteIds,
     });
-    mutateFavorites();
-  }, [movieId, isFavorite, currentUser, mutate, mutateFavorites]);
+  }, [movieId, isFavorite, currentUser, mutate]);
   
   const Icon = isFavorite ? CheckIcon : PlusIcon;
 
