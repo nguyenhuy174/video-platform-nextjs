@@ -16,7 +16,7 @@ const NavbarItemHome: React.FC<NavbarItemHomeProps> = ({ label }) => {
   return (
     <div
       onClick={handleLabelClick}
-      className="text-gray-200 hover:text-gray-300 cursor-pointer transition border border-transparent hover:border-gray-300 rounded-md"
+      className="text-gray-200 hover:text-purple-400 cursor-pointer"
     >
       {label}
     </div>

@@ -83,7 +83,7 @@ const Navbar = () => {
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
           <IconSearch />
-          <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
+          <div className="text-gray-200 hover:text-purple-400 cursor-pointer transition">
             <BellIcon className="w-6" />
           </div>
           <div
@@ -94,7 +94,7 @@ const Navbar = () => {
               <img src="/images/default-blue.png" alt="" />
             </div>
             <ChevronDownIcon
-              className={`w-4 text-white fill-white transition ${
+              className={`w-5 text-white fill-white transition hover:text-purple-400 ${
                 showAccountMenu ? "rotate-180" : "rotate-0"
               }`}
             />

@@ -38,7 +38,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
         <div
           className={`${
             isVisible ? "scale-100" : "scale-0"
-          } transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md`}
+          } transform duration-300 relative flex-auto bg-zinc-800 drop-shadow-md`}
         >
           <div className="relative h-96">
             <video
@@ -53,7 +53,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               onClick={handleClose}
               className="cursor-pointer absolute top-3 right-3 h-10 w-10 rounded-full bg-black bg-opacity-70 flex items-center justify-center"
             >
-              <XMarkIcon className="text-white w-6" />
+              <XMarkIcon className="text-yellow-400 w-6 hover:text-white" />
             </div>
             <div className="absolute bottom-[10%] left-10">
               <p className="text-white text-3xl md:text-4xl h-full lg:text-5xl font-bold mb-8">
@@ -74,6 +74,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               <p className="text-yellow-400 text-lg">Thể loại:</p>
               <p className="text-white text-lg">{data?.genre}</p>
             </div>
+            
             <p className="text-white text-lg">{data?.description}</p>
           </div>
         </div>

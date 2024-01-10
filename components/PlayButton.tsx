@@ -3,7 +3,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 
 interface PlayButtonProps {
-  movieId: string;
+  movieId: string; //interface mô tả thành phần PlayButton có thể nhận
 }
 
 const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
@@ -13,7 +13,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
     <button
       onClick={() => router.push(`/watch/${movieId}`)}
       className="
-        bg-white 
+        bg-purple-200
         rounded-md 
         py-1 md:py-2 
         px-2 md:px-4
@@ -23,7 +23,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
         flex
         flex-row
         items-center
-        hover:bg-neutral-300
+        hover:bg-purple-400
         transition
         "
     >

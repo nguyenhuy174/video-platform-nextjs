@@ -7,11 +7,11 @@ import useInfoModal from "@/hooks/useInfoModal";
 
 const Billboard: React.FC = () => {
   const { openModal } = useInfoModal();
-  const { data } = useBillboard();
+  const { data } = useBillboard(); // lấy videoUrl, thumbnailUrl, title, description
 
   const handleOpenModal = useCallback(() => {
     openModal(data?.id);
-  }, [openModal, data?.id]);
+  }, [openModal, data?.id]); // mở modal thông tin khi được gọi
 
   return (
     <div className="relative h-[56.25vw]">
@@ -39,7 +39,8 @@ const Billboard: React.FC = () => {
       >
         <p
           className="
-        text-white 
+          animate-pulse
+        text-yellow-400 
         text-1xl 
         md:text-5xl 
         h-full 
@@ -69,9 +70,9 @@ const Billboard: React.FC = () => {
           <button
             onClick={handleOpenModal}
             className="
-            bg-white
-            text-white
-              bg-opacity-30 
+            bg-yellow-300
+            text-black
+              bg-opacity-60 
               rounded-md 
               py-1 md:py-2 
               px-2 md:px-4
@@ -82,6 +83,7 @@ const Billboard: React.FC = () => {
               flex-row
               items-center
               hover:bg-opacity-20
+              hover:text-white
               transition
             "
           >
