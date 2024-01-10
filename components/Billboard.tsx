@@ -88,7 +88,7 @@ const Billboard: React.FC = () => {
             "
           >
             <InformationCircleIcon className="w-4 md:w-7 mr-1" />
-            Thông tin phim
+            Thông tin video
           </button>
         </div>
       </div>
