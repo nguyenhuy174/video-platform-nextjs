@@ -104,16 +104,16 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             justify-center 
             items-center 
             transition 
-            hover:bg-neutral-300"
+            hover:bg-purple-300"
             >
-              <PlayIcon className="text-black w-4 lg:w-6" />
+              <PlayIcon className="text-purple-800 hover:text-white w-4 lg:w-6" />
             </div>
             <FavoriteButton movieId={data.id} />
             <div
               onClick={() => openModal(data?.id)}
-              className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300"
+              className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-yellow-200"
             >
-              <ChevronDownIcon className="text-white group-hover/item:text-purple-400 w-4 lg:w-6" />
+              <ChevronDownIcon className="text-white hover:text-yellow-200 w-4 lg:w-6" />
             </div>
           </div>
           <p className="text-green-400 font-semibold mt-4">

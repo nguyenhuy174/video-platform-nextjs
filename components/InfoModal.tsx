@@ -40,7 +40,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
             isVisible ? "scale-100" : "scale-0"
           } transform duration-300 relative flex-auto bg-zinc-800 drop-shadow-md`}
         >
-          <div className="relative h-96">
+          <div className="relative h-72">
             <video
               poster={data?.thumbnailUrl}
               autoPlay
