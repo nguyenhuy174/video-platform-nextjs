@@ -2,15 +2,11 @@ import { signOut } from "next-auth/react";
 import React from "react";
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 
-import useCurrentUser from "@/hooks/useCurrentUser";
-
 interface AccountMenuProps {
   visible?: boolean;
 }
 
 const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
-  const { data: currentUser } = useCurrentUser();
-
   if (!visible) {
     return null;
   }
@@ -25,7 +21,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
             alt=""
           />
           <p className="text-white text-sm group-hover/item:underline">
-            {currentUser?.name}
+            - Anonymous -
           </p>
         </div>
       </div>
