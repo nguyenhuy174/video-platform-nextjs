@@ -23,11 +23,12 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
         flex
         flex-row
         items-center
-        hover:bg-purple-400
+        hover:bg-purple-500
+        hover:text-white
         transition
         "
     >
-      <PlayIcon className="w-4 md:w-7 text-black mr-1" />
+      <PlayIcon className="w-4 md:w-7 text-black mr-1 hover:text-white" />
       Xem ngay
     </button>
   );

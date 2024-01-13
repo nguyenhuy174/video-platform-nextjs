@@ -7,7 +7,7 @@ const Watch = () => {
   const router = useRouter();
   const { movieId } = router.query;
 
-  const { data } = useMovie(movieId as string);
+  const { data } = useMovie(movieId as string); //data lấy từ hook useMovie
 
   return (
     <div className="h-screen w-screen bg-black">
@@ -16,8 +16,8 @@ const Watch = () => {
           onClick={() => router.push("/")}
           className="w-4 md:w-10 text-white cursor-pointer hover:opacity-80 transition"
         />
-        <p className="text-white text-1xl md:text-3xl font-bold">
-          <span className="font-light">Bạn đang xem:</span>
+        <p className="text-yellow-300 text-1xl md:text-3xl font-bold">
+          <span className="font-light text-white">Bạn đang xem:</span>
           {data?.title}
         </p>
       </nav>
