@@ -28,7 +28,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
         transition
         "
     >
-      <PlayIcon className="w-4 md:w-7 text-black mr-1 hover:text-white" />
+      <PlayIcon className="w-4 md:w-7 text-black mr-1" />
       Xem ngay
     </button>
   );

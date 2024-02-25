@@ -106,7 +106,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             transition 
             hover:bg-purple-300"
             >
-              <PlayIcon className="text-purple-800 hover:text-white w-4 lg:w-6" />
+              <PlayIcon className="text-purple-800 w-4 lg:w-6" />
             </div>
             <FavoriteButton movieId={data.id} />
             <div
