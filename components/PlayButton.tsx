@@ -24,7 +24,6 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
         flex-row
         items-center
         hover:bg-purple-500
-        hover:text-white
         transition
         "
     >
