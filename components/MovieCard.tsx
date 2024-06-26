@@ -104,7 +104,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             justify-center 
             items-center 
             transition 
-            hover:bg-purple-300"
+            hover:bg-yellow-200"
             >
               <PlayIcon className="text-purple-800 w-4 lg:w-6" />
             </div>

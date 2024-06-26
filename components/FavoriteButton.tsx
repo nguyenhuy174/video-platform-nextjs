@@ -31,9 +31,9 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
         justify-center 
         items-center 
         transition 
-        hover:border-purple-400"
+        hover:border-yellow-400"
     >
-      <Icon className="text-white group-hover/item:text-purple-400 w-4 lg:w-6" />
+      <Icon className="text-yellow-400 w-4 lg:w-6" />
     </div>
   );
 };
