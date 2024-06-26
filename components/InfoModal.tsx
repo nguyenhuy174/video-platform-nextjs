@@ -56,7 +56,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               <XMarkIcon className="text-yellow-400 w-6 hover:text-white" />
             </div>
             <div className="absolute bottom-[10%] left-10">
-              <p className="text-white text-3xl md:text-4xl h-full lg:text-5xl font-bold mb-8">
+              <p className="text-white text-2xl md:text-3xl h-full lg:text-4xl font-bold mb-8">
                 {data?.title}
               </p>
               <div className="flex flex-row gap-4 items-center">
@@ -67,14 +67,22 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
           </div>
 
           <div className="px-12 py-8">
-            <div className="flex flex-row items-center gap-2 mb-8">
-              <p className="text-green-400 font-semibold text-lg">New</p>
-              <p className="text-yellow-400 text-lg">Thời lượng:</p>
-              <p className="text-white text-lg">{data?.duration}</p>
-              <p className="text-yellow-400 text-lg">Thể loại:</p>
-              <p className="text-white text-lg">{data?.genre}</p>
+            <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex items-center gap-2">
+                <p className="text-yellow-400 text-lg font-semibold">
+                  Thời lượng:
+                </p>
+                <p className="text-white text-lg">{data?.duration}</p>
+              </div>
+              <div className="flex gap-2">
+                <p className="text-green-400 text-lg mb-2 lg:mb-0 font-semibold flex-shrink-0">
+                  Thể loại:
+                </p>
+                <p className="text-white text-lg mb-2 lg:mb-0 items-center">
+                  {data?.genre}
+                </p>
+              </div>
             </div>
-            
             <p className="text-white text-lg">{data?.description}</p>
           </div>
         </div>

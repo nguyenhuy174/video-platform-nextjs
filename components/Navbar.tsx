@@ -8,10 +8,6 @@ import {
 
 import AccountMenu from "@/components/AccountMenu";
 import MobileMenu from "@/components/MobileMenu";
-import NavbarItem from "@/components/NavbarItem";
-import NavbarItemHome from "@/components/NavbarItemHome";
-import NavbarItemMylist from "@/components/NavbarItemMylist";
-import IconSearch from "@/components/IconSearch";
 
 const TOP_OFFSET = 66;
 
@@ -23,7 +19,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY >= TOP_OFFSET) {
         setShowBackground(true);
       } else {
@@ -48,7 +43,8 @@ const Navbar = () => {
 
   const goToHomePage = useCallback(() => {
     router.push("/");
-  }, [router]);
+    router.reload();
+  }, []);
 
   return (
     <nav className="w-full fixed z-40">
@@ -58,17 +54,36 @@ const Navbar = () => {
         }`}
       >
         <img
-          src="/images/logo2.png"
-          className="h-4 lg:h-7 cursor-pointer transition"
+          src="/images/logo.png"
+          className="h-7 lg:h-10 cursor-pointer transition"
           alt="Logo"
           onClick={goToHomePage}
         />
-        <div className="text-xl flex-row ml-8 gap-7 hidden lg:flex">
-          <NavbarItemHome label="Trang chủ" />
-          <NavbarItem label="Phim bộ" />
-          <NavbarItem label="Phim lẻ" />
-          <NavbarItem label="Phim mới" />
-          <NavbarItemMylist label="Danh sách yêu thích" />
+        <div className="text-xl flex-row ml-16 gap-7 hidden lg:flex">
+          <a
+            href="https://wutheringwaves.kurogames.com/en/main"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-purple-400 cursor-pointer transition"
+          >
+            Official Website
+          </a>
+          <a
+            href="https://www.youtube.com/@wutheringwaves3352/featured"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-purple-400 cursor-pointer transition"
+          >
+            Official Youtube
+          </a>
+          <a
+            href="https://x.com/Wuthering_Waves"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-200 hover:text-purple-400 cursor-pointer transition"
+          >
+            Official X
+          </a>
         </div>
         <div
           onClick={toggleMobileMenu}
@@ -82,7 +97,6 @@ const Navbar = () => {
           <MobileMenu visible={showMobileMenu} />
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
-          <IconSearch />
           <div className="text-gray-200 hover:text-purple-400 cursor-pointer transition">
             <BellIcon className="w-6" />
           </div>
@@ -91,7 +105,7 @@ const Navbar = () => {
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-              <img src="/images/default-blue.png" alt="" />
+              <img src="/images/default.png" alt="" />
             </div>
             <ChevronDownIcon
               className={`w-5 text-white fill-white transition hover:text-purple-400 ${

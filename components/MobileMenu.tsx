@@ -8,16 +8,6 @@ interface MobileMenuProps {
 const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
   const router = useRouter();
 
-  const handleHomeClick = () => {
-    // Chuyển hướng đến trang chủ
-    router.push("/");
-  };
-
-  const handleFavoriteClick = () => {
-    // Chuyển hướng đến trang danh sách yêu thích
-    router.push("/favorites");
-  };
-
   if (!visible) {
     return null;
   }
@@ -25,26 +15,32 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
   return (
     <div className="bg-black w-56 absolute top-8 left-0 py-5 flex-col border-2 border-gray-800 flex">
       <div className="flex flex-col gap-4">
-        <div
-          className="px-3 text-center text-white hover:underline"
-          onClick={handleHomeClick}
-        >
-          Trang chủ
+        <div className="px-3 text-center text-white cursor-pointer hover:text-purple-400">
+          <a
+            href="https://wutheringwaves.kurogames.com/en/main"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Official Website
+          </a>
         </div>
-        <div className="px-3 text-center text-white hover:underline">
-          Phim bộ
+        <div className="px-3 text-center text-white cursor-pointer hover:text-purple-400">
+          <a
+            href="https://www.youtube.com/@wutheringwaves3352/featured"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Official Youtube
+          </a>
         </div>
-        <div className="px-3 text-center text-white hover:underline">
-          Phim lẻ
-        </div>
-        <div className="px-3 text-center text-white hover:underline">
-          Phim mới
-        </div>
-        <div
-          className="px-3 text-center text-white hover:underline"
-          onClick={handleFavoriteClick}
-        >
-          Danh sách yêu thích
+        <div className="px-3 text-center text-white cursor-pointer hover:text-purple-400">
+          <a
+            href="https://x.com/Wuthering_Waves"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Official X
+          </a>
         </div>
       </div>
     </div>

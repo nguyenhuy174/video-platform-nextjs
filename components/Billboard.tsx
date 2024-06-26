@@ -31,21 +31,18 @@ const Billboard: React.FC = () => {
       ></video>
       <div
         className="
-      absolute 
-      top-[30%] 
-      md:top-[40%] 
-      ml-4 
-      md:ml-16"
+      absolute top-[20%] md:top-[30%] ml-4 md:ml-16"
       >
         <p
           className="
-          animate-pulse
-        text-yellow-400 
-        text-1xl 
-        md:text-5xl 
-        h-full 
-        w-[50%] 
-        lg:text-6xl 
+        animate-pulse
+      text-yellow-400 
+        text-lg
+        md:text-3xl 
+        lg:text-4xl 
+        w-full
+        overflow-hidden
+        text-ellipsis
         font-bold 
         drop-shadow-xl"
         >
@@ -53,14 +50,14 @@ const Billboard: React.FC = () => {
         </p>
         <p
           className="
-          text-white
+      text-white
         text-[8px] 
         md:text-lg 
         mt-3 
         md:mt-8 
-        w-[90%] 
-        md:w-[80%] 
-        lg:w-[50%] 
+        w-[90%]
+        overflow-hidden
+        text-ellipsis
         drop-shadow-xl"
         >
           {data?.description}
@@ -70,7 +67,7 @@ const Billboard: React.FC = () => {
           <button
             onClick={handleOpenModal}
             className="
-            bg-yellow-300
+            bg-blue-500
             text-black
               bg-opacity-60 
               rounded-md 
@@ -82,7 +79,7 @@ const Billboard: React.FC = () => {
               flex
               flex-row
               items-center
-              hover:bg-opacity-20
+              hover:bg-opacity-60
               hover:text-white
               transition
             "

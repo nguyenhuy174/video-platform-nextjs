@@ -116,20 +116,18 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               <ChevronDownIcon className="text-white hover:text-yellow-200 w-4 lg:w-6" />
             </div>
           </div>
-          <p className="text-green-400 font-semibold mt-4">
-            New <span className="text-white">2023</span>
-          </p>
+
           <div className="flex flex-row mt-4 gap-2 items-center">
             <p className="text-yellow-400 text-[10px] lg:text-sm font-semibold">
               Thời lượng:
             </p>
             <p className="text-white text-[10px] lg:text-sm">{data.duration}</p>
           </div>
-          <div className="flex flex-row items-center gap-2 mt-4 text-[8px] text-white lg:text-sm">
-            <p className="text-yellow-400 text-[10px] lg:text-sm font-semibold">
+          <div className="flex flex-row gap-2 mt-4 text-[8px] text-white lg:text-sm">
+            <p className="text-green-400 text-[10px] lg:text-sm font-semibold flex-shrink-0">
               Thể loại:
             </p>
-            <p>{data.genre}</p>
+            <p className="ml-2 text-ellipsis overflow-hidden">{data.genre}</p>
           </div>
         </div>
       </div>

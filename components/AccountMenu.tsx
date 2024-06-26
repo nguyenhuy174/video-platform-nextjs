@@ -1,6 +1,4 @@
-import { signOut } from "next-auth/react";
 import React from "react";
-import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 
 interface AccountMenuProps {
   visible?: boolean;
@@ -17,23 +15,19 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
         <div className="px-3 group/item flex flex-row gap-3 items-center w-full">
           <img
             className="w-8 rounded-md"
-            src="/images/default-blue.png"
+            src="/images/default.png"
             alt=""
           />
-          <p className="text-white text-sm group-hover/item:underline">
-            - Anonymous -
+          <p className="text-white text-sm group-hover/item:text-yellow-300">
+            - Yangyang -
           </p>
         </div>
       </div>
       <hr className="bg-gray-600 border-0 h-px my-4" />
       <div
-        onClick={() => signOut()}
-        className="text-white text-sm hover:underline flex items-center justify-center"
+        className="text-white text-sm flex items-center justify-center"
       >
-        <span className="px-3 text-center">
-          Đăng xuất
-        </span>
-        <ArrowRightOnRectangleIcon className="w-4 md:w-6 mr-1" />
+        Wuthering Waves
       </div>
     </div>
   );
