@@ -35,7 +35,6 @@ const Billboard: React.FC = () => {
       >
         <p
           className="
-        animate-pulse
       text-yellow-400 
         text-lg
         md:text-3xl 
