@@ -16,7 +16,7 @@ const Watch = () => {
           onClick={() => router.push("/")}
           className="w-4 md:w-10 text-white cursor-pointer hover:opacity-80 transition"
         />
-        <p className="text-yellow-300 text-1xl md:text-3xl font-bold">
+        <p className="text-green-500 text-1xl md:text-3xl font-bold">
           <span className="font-light text-white">Bạn đang xem:</span>
           {data?.title}
         </p>
