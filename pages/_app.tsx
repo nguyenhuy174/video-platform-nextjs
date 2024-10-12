@@ -4,8 +4,8 @@ import type { AppProps } from 'next/app';
 
 
 export const metadata = {
-  title: 'WuWa Video',
-  description: 'Wuthering Waves Video Collection',
+  title: 'Wuthering Waves PV',
+  description: 'Wuthering Waves PV Collection',
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
